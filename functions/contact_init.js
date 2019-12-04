@@ -23,7 +23,6 @@ exports.handler = (event, context, callback) => {
     let contactId = event.Details.ContactData.ContactId;
 
     //Sets the timezone environment variable for the Lambda function to east coast. You can change this to your preferred timezone, or remove this line to use UTC
-    process.env.TZ = "America/New_York";
     var tableName = process.env.table_name;
     var currentTimeStamp = new Date().toString();
     var currentDate = new Date().toLocaleDateString();
