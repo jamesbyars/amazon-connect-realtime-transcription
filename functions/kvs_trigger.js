@@ -60,11 +60,11 @@ exports.handler = (event, context, callback) => {
 
     lambda.invokeAsync(params, function(err, data) {
         if (err) {
-            sendAnonymousData("ERROR");
+            // sendAnonymousData("ERROR");
             throw (err);
         } else {
             console.log(JSON.stringify(data));
-            sendAnonymousData("SUCCESS");
+            // sendAnonymousData("SUCCESS");
             if (callback)
                 callback(null, buildResponse());
             else

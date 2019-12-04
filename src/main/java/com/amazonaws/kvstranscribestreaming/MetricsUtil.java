@@ -34,15 +34,16 @@ public class MetricsUtil {
     }
 
     public void recordMetric(final String metricName, long value) {
-        MetricDatum metricData = new MetricDatum().withMetricName(metricName)
-                .withTimestamp(Date.from(Instant.now()))
-                .withUnit(StandardUnit.Count)
-                .withValue(Double.valueOf(value));
+//        MetricDatum metricData = new MetricDatum().withMetricName(metricName)
+//                .withTimestamp(Date.from(Instant.now()))
+//                .withUnit(StandardUnit.Count)
+//                .withValue(Double.valueOf(value));
+//
+//        PutMetricDataRequest metricRequest = new PutMetricDataRequest()
+//                .withNamespace(NAMESPACE)
+//                .withMetricData(metricData);
+//
+//        amazonCloudWatch.putMetricData(metricRequest);
 
-        PutMetricDataRequest metricRequest = new PutMetricDataRequest()
-                .withNamespace(NAMESPACE)
-                .withMetricData(metricData);
-
-        amazonCloudWatch.putMetricData(metricRequest);
     }
 }
